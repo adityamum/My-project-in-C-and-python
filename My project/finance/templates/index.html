@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <table class = "table">
+        <thead>
+            <tr>
+                <th scope="col">Symbol</th>
+                <th scope="col">Name</th>
+                <th scope="col">Share</th>
+                <th scope="col">price</th>
+                <th scope="col">Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in products %}
+                <tr scope = "row">
+                        <td >{{ row["symbol"] }}</td>
+                        <td >{{ row["name"] }}</td>
+                        <td >{{ row["share"] }}</td>
+                        <td >{{ row["price"] | usd }}</td>
+                        <td >{{ row["total"] | usd}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="text-end fw-bold">
+        <p class="h5" >Cash: {{ total_value }}</p>
+    </div>
+    <div class="text-end fw-bold">
+        <p class="h5">Total:10000</p>
+    </div>
+
+{% endblock %}

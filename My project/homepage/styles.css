@@ -1,0 +1,40 @@
+#centered{
+
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin-top: -50px;
+    margin-bottom: -50px;
+
+}
+
+#first{
+    position:absolute;
+    top:21px;
+}
+
+#item{
+    position:absolute;
+    left:200px;
+    top:30px;
+    list-style-type:none;
+}
+#inline{
+    display: inline-block;
+    padding-left:200px;
+}
+
+#myimage{
+    width: 130%;
+    height: 250px;
+}
+#pad{
+    margin-left: 10px;
+    margin-right: 600px
+}
+
+#right{
+    position:absolute;
+    right:0;
+
+}

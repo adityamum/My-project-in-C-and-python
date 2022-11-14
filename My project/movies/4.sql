@@ -1,0 +1,1 @@
+SELECT COUNT(movie_id) AS counters FROM ratings where rating = 10.0

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name = "viewport" content = "initial-scale = 1.0 ; maximum-scale=1.0;initial-scale=1.0; width = device-width; height= device-height">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>My Resume</title>
+        <script>
+            function greet(){
+
+                alert("Click on ok to continue the download");
+            }
+
+        </script>
+    </head>
+   <body>
+    <div class = "p-3 mb-2 bg-dark text-white">
+        <p>
+            <a class = "nav-link text-white" href="index.html">Home</a>
+        </p>
+    </div>
+    <form>
+        <button id="right" onclick="greet()">
+            <a href="resume1.pdf" target="_blank" download="resume">Download pdf</a>
+        </button>
+    </form>
+
+    <div>
+        <h1 class="display-1">Work Experience</h1>
+    </div>
+    <div class="lead" id ="pad">
+        <p >Highly skilled professional with around 3 years of experience in field of Software
+           analysis and Application Packaging and Application Compatibility Testing.
+        <p>Understanding Software requirement specification and identifying required Test
+            scenarios.</p>
+        <p>Package and re-package of MSI as per the requirements.</p>
+        <p>Experience in Executing Test cases to test the application functionality against the
+            requirement manually.</p>
+        <p>Defect reporting on functionality issue and tracking if the package adhering the client
+            standards.</p>
+        <p>Good Understanding of MSI packaging using technologies: Admin Studio and Install
+        Shield. Having a good experience in design and installation of Microsoft system
+        configuration manager.</p>
+    </div>
+   </body>
+</html>

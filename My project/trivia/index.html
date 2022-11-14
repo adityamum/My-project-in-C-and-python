@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            function del(){
+                document.getElementById('gr').style.backgroundColor = 'green';
+                document.getElementById('ans').innerHTML = "Correct!";
+
+            }
+            function kol(){
+                document.getElementById('kl').style.backgroundColor = "red";
+                document.getElementById('ans').innerHTML = "InCorrect";
+            }
+            function ker(){
+                document.getElementById('kerala').style.backgroundColor = "red";
+                document.getElementById('ans').innerHTML = "InCorrect";
+
+            }
+
+            function pun(){
+                document.getElementById('pune').style.backgroundColor = "red";
+                document.getElementById('ans').innerHTML = "InCorrect";
+            }
+
+            function check(){
+
+                let name = document.querySelector('#name').value.toLowerCase();
+                if(name == 'tiger'){
+
+                     document.getElementById('chk').style.backgroundColor = 'green';
+                     document.getElementById('cor').innerHTML = 'Correct!';
+                }
+                else{
+
+                     document.getElementById('chk').style.backgroundColor = 'red';
+                      document.getElementById('cor').innerHTML = 'Incorrect';
+                }
+
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>What is the capital of INDIA?</h3>
+                <button  id  = 'kl' onclick = 'kol()'>Kolkata</button>
+                <button  id = 'gr' onclick = 'del()'>Delhi</button>
+                <button  id = 'kerala'  onclick = 'ker()'>Kerala</button>
+                <button  id = 'pune' onclick =  'pun()'>Punjab</button>
+                <p id = 'ans' ></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3> Name the National animal of India?</h3>
+                <input autocomplete = "off" id = 'name' type= 'text'>
+                <button id = "chk" onclick = "check()">Check Answer</button>
+                <p id = "cor"></p>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block titla %}
+    History
+{% endblock %}
+
+{% block main %}
+    <table class="table">
+        <thead>'
+            <tr>
+                <th class="col">Symbol</th>
+                <th class="col">Share</th>
+                <th class="col">Price</th>
+                <th class="col">Transaction</th>
+            </tr>
+        </thead>
+        <tbody scope="row">
+
+                {% for row in buy %}
+                <tr>
+                    <td>{{ row["symbol"] }}</td>
+                    <td>{{ row["share"] }}</td>
+                    <td>{{ row["price"] }}</td>
+                    <td>{{ row["date"] }}</td>
+                </tr>
+                {% endfor %}
+          <tbody>
+        <tbody scope = row>
+                {% for sells in  sell %}
+                <tr>
+                    <td>{{ sells["symbol"] }}</td>
+                    <td>{{ sells["share"] }}</td>
+                    <td>{{ sells["price"] }}</td>
+                    <td>{{ sells["date"] }}</td>
+                </tr>
+               {% endfor %}
+            </tbody>
+    </table>
+{% endblock %}

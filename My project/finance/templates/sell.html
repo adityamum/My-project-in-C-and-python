@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block title %}
+    Sell share!
+{% endblock %}
+
+{% block main %}
+    <form action = "/sell" method = "post">
+        <div class="mb-3">
+            <select class="form-select w-auto mx-auto" name = "share">
+                <option disable selected>Shares</option>
+                {% for symbols in symbol %}
+                    <option >{{ symbols["symbol"] }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class = "mb-3">
+            <input class="form-control mx-auto w-auto" autofocus autocomplete = "off" name = "sell" type = "text" placeholder = "Number of shares" >
+        </div>
+        <button class = "btn btn-primary" type = "submit">Submit</button>
+    </form>
+{% endblock %}

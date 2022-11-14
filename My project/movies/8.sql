@@ -1,0 +1,1 @@
+SELECT name from people where id IN (Select person_id FROM stars where movie_id IN (SELECT id FROM movies where title = "Toy Story"))

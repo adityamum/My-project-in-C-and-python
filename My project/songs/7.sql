@@ -1,0 +1,1 @@
+SELECT avg(energy) AS avgD FROM songs WHERE artist_id = 23
